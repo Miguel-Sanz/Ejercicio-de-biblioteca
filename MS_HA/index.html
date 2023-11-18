@@ -1,4 +1,4 @@
-<!-- IR_SV/index.html -->
+<!-- index.html -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -6,24 +6,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
+    <style>
+        body {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        form, button {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <h1>Biblioteca</h1>
-    <form action="conecta.php" method="post">
 
+    <!-- Formulario para registrar un nuevo lector -->
+    <form action="registrar_lector.php" method="post">
         <label for="nombre">Nombre del lector:</label>
         <input type="text" name="nombre" required>
 
-        
+        <label for="dni">DNI del lector:</label>
+        <input type="text" name="dni" required>
 
         <input type="submit" value="Registrar Lector">
     </form>
+<br>
+    <!-- Botones y formularios para otras acciones -->
+    <button onclick="location.href='realizar_prestamo.php'">Realizar Préstamo</button>
 
-    <!-- Agregar botones y formularios para otras acciones -->
+    <form action="devolver_prestamo.php" method="post">
+        <label for="id_lector_devolucion">ID del Lector:</label><br>
+        <input type="text" name="id_lector_devolucion" required><br>
+        <label for="id_libro_devolucion">ID del Libro a Devolver:</label><br>
+        <input type="text" name="id_libro_devolucion" required>
 
+        <br><br>
+        <input type="submit" value="Devolver Préstamo">
+    </form>
+<br>
+    <form action="agregar_libro.php" method="post">
+        <!-- Agregar campos para los detalles del libro -->
+        <input type="submit" value="Añadir Libro al Catálogo">
+    </form>
+<br>
+    <form action="dar_de_baja_lector.php" method="post">
+        <label for="id_lector_baja">ID del Lector a Dar de Baja:</label>
+        <input type="text" name="id_lector_baja" required>
+        <input type="submit" value="Dar de Baja a un Lector">
+    </form>
+<br>
+    <button onclick="location.href='consultar_catalogo.php'">Consultar Catálogo</button>
+<br>
+
+    <form action="consultar_prestamos_lector.php" method="post">
+        <label for="id_lector_consulta">ID del Lector a Consultar:</label>
+        <input type="text" name="id_lector_consulta" required>
+        <input type="submit" value="Consultar Préstamos de un Lector">
+    </form>
+<br>
     <footer>
-        
         <p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p>
     </footer>
 </body>
 </html>
+
