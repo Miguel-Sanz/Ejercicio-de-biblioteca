@@ -1,73 +1,67 @@
-<!-- index.html -->
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca</title>
+    <strong><title>Biblioteca</title></strong>
     <style>
+        
         body {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            background-color: #bfffc1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
-        form, button {
-            margin-bottom: 15px;
+        h1 {
+            color: #146b18;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            margin-top: 20px;
+            color: #555;
         }
     </style>
 </head>
 <body>
     <h1>Biblioteca</h1>
 
-    <!-- Formulario para registrar un nuevo lector -->
-    <form action="registrar_lector.php" method="post">
-        <label for="nombre">Nombre del lector:</label>
-        <input type="text" name="nombre" required>
+    <!-- Botones para acciones -->
+    <button onclick="window.location.href='registrar_un_lector.php'">Registrar un nuevo lector</button>
+    <button onclick="window.location.href='realizar_un_prestamo.php'">Realizar un préstamo</button>
+    <button onclick="window.location.href='devolver_un_prestamo.php'">Devolver un préstamo</button>
+    <button onclick="window.location.href='añadir_un_libro_al_catalogo.php'">Añadir un libro al catálogo</button>
+    <button onclick="window.location.href='dar_de_baja_un_lector.php'">Dar de baja un lector</button>
+    <button onclick="window.location.href='consultar_catalogo_de_libros_disponibles.php'">Consultar el catálogo de libros disponibles</button>
+    <button onclick="window.location.href='consultar_prestamos_realizados_por_un_lector.php'">Consultar préstamos realizados por un lector</button>
 
-        <label for="dni">DNI del lector:</label>
-        <input type="text" name="dni" required>
-
-        <input type="submit" value="Registrar Lector">
-    </form>
-<br>
-    <!-- Botones y formularios para otras acciones -->
-    <button onclick="location.href='realizar_prestamo.php'">Realizar Préstamo</button>
-
-    <form action="devolver_prestamo.php" method="post">
-        <label for="id_lector_devolucion">ID del Lector:</label><br>
-        <input type="text" name="id_lector_devolucion" required><br>
-        <label for="id_libro_devolucion">ID del Libro a Devolver:</label><br>
-        <input type="text" name="id_libro_devolucion" required>
-
-        <br><br>
-        <input type="submit" value="Devolver Préstamo">
-    </form>
-<br>
-    <form action="agregar_libro.php" method="post">
-        <!-- Agregar campos para los detalles del libro -->
-        <input type="submit" value="Añadir Libro al Catálogo">
-    </form>
-<br>
-    <form action="dar_de_baja_lector.php" method="post">
-        <label for="id_lector_baja">ID del Lector a Dar de Baja:</label>
-        <input type="text" name="id_lector_baja" required>
-        <input type="submit" value="Dar de Baja a un Lector">
-    </form>
-<br>
-    <button onclick="location.href='consultar_catalogo.php'">Consultar Catálogo</button>
-<br>
-
-    <form action="consultar_prestamos_lector.php" method="post">
-        <label for="id_lector_consulta">ID del Lector a Consultar:</label>
-        <input type="text" name="id_lector_consulta" required>
-        <input type="submit" value="Consultar Préstamos de un Lector">
-    </form>
-<br>
     <footer>
         <p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p>
     </footer>
 </body>
 </html>
-
