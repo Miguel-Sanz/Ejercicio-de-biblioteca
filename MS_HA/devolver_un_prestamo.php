@@ -98,6 +98,7 @@ mysqli_close($conexion);
 
     <footer>
         <p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p>
+        <a href="index.html">Volver al Inicio</a>
     </footer>
 </body>
 
