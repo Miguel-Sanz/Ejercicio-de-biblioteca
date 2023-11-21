@@ -31,10 +31,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultar préstamos realizados por un lector</title>
+    <!-- Implantancion de los stilos css a la pagina -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -85,10 +87,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Consultar préstamos realizados por un lector</h1>
     </header>
+    <!-- Creación del formulario -->
     <form action="" method="post">
         <label for="id_lector_consulta">ID del lector:</label>
         <input type="text" name="id_lector_consulta" required>
@@ -100,5 +104,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p>
     </footer>
 </body>
-</html>
 
+</html>

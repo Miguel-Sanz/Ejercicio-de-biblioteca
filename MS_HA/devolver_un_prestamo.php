@@ -24,10 +24,12 @@ mysqli_close($conexion);
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devolver un préstamo</title>
+    <!-- Implantancion de los stilos css a la pagina -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -78,10 +80,12 @@ mysqli_close($conexion);
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Devolver un préstamo</h1>
     </header>
+    <!-- Creación del formulario -->
     <form action="" method="post">
         <label for="id_lector_devolucion">ID del lector:</label>
         <input type="text" name="id_lector_devolucion" required>
@@ -96,5 +100,5 @@ mysqli_close($conexion);
         <p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p>
     </footer>
 </body>
-</html>
 
+</html>

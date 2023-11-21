@@ -1,10 +1,10 @@
 <?php
-
+//Conexión a la base de datos
 require_once("conecta.php");
 $conexion = conecta();
 $base_datos = 'biblioteca';
 $conexion->select_db($base_datos);
-
+//Creación de las tablas 
 $sql_libros = "CREATE TABLE IF NOT EXISTS libros (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
@@ -38,16 +38,15 @@ mysqli_query($conexion, $sql_prestamo);
 $sql = "SELECT lector FROM lectores";
 $resultado = mysqli_query($conexion, $sql) or die("Error al comprobar los datos");
 
-if(mysqli_num_rows($resultado) == 0){
+if (mysqli_num_rows($resultado) == 0) {
     $libro1 = "INSERT INTO libros (nombre, autor, publicacion, ISBN, n_disponibles, n_totales) VALUES ('Harry Potter y el prisionero de Azkaban', 'JK Rowling', 1999, 1234567890123, 5, 10)";
     mysqli_query($conexion, $libro1);
-
+    //Realización de los INSERT INTO para añadir datos en las tablas
     mysqli_query($conexion, "INSERT INTO libros (nombre, autor, publicacion, ISBN, n_disponibles, n_totales) VALUES ('Boulevard', 'Flor M. Salvador', 2020, 9789807909068, 7, 10)");
     mysqli_query($conexion, "INSERT INTO lectores (lector, DNI) VALUES ('Fernando Alonso Diaz', '12335678A')");
     mysqli_query($conexion, "INSERT INTO lectores (lector, DNI) VALUES ('Carlos Sainz Vazquez', '12345578N')");
     mysqli_query($conexion, "INSERT INTO prestamo (id_lector, id_libro) VALUES (1, 1)");
     mysqli_query($conexion, "INSERT INTO prestamo (id_lector, id_libro) VALUES (2, 1)");
-
 }
 
 mysqli_close($conexion);

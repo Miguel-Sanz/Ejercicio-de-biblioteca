@@ -1,10 +1,12 @@
 <?php
+//Realizamos la función conecta para despues implementarla en el resto de php
 function conecta()
 {
+    //Indicamos a que servidor nos vamos a conectar, el usuario y la contraseña
     $servername = "localhost";
     $username = "root";
     $password = "";
-
+    //Realizamos la conexion
     $conexion = mysqli_connect($servername, $username, $password);
 
     if (!$conexion) {
@@ -30,5 +32,3 @@ function conecta()
 }
 
 $conexion = conecta();
-
-?>

@@ -27,10 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir un libro al catálogo</title>
+    <!-- Implantancion de los stilos css a la pagina -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -81,10 +83,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Añadir un libro al catálogo</h1>
     </header>
+    <!-- Creación del formulario -->
     <form action="" method="post">
         <label for="nombre_libro">Nombre del libro:</label>
         <input type="text" name="nombre_libro" required>
@@ -111,4 +115,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p>
     </footer>
 </body>
+
 </html>
