@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($n_prestado_lector === 0) {
         // Dar de baja al lector
-        mysqli_query($conexion, "UPDATE lectores SET estado = 'baja' WHERE id = $id_lector_baja");
+        mysqli_query($conexion, "DELETE lectores SET estado = 'baja' WHERE id = $id_lector_baja");
 
         echo "Lector dado de baja con éxito";
     } else {
