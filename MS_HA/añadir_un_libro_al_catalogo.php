@@ -113,7 +113,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <footer>
         <p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p>
-        <a href="index.html">Volver al Inicio</a>
     </footer>
 </body>
 

@@ -90,5 +90,4 @@
     }
     ?>
 </body>
-    <p><a href="index.html">Volver al Inicio</a></p>
 </html>
