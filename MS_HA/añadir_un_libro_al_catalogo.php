@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir un libro al catálogo</title>
-    <!-- Implantancion de los stilos css a la pagina -->
+    <!-- Implantación de los estilos CSS a la página -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -81,6 +81,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #333;
             color: white;
         }
+        .boton-regreso {
+            position: fixed;
+            bottom: 10px; 
+            left: 10px; 
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px; 
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+        }
+
+        .boton-regreso:hover {
+            background-color: #45a049;}
     </style>
 </head>
 
@@ -114,6 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <footer>
         <p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p>
     </footer>
+    <a href="index.html" class="boton-regreso">Volver a Inicio</a>
 </body>
 
 </html>

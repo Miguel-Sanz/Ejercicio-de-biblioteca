@@ -44,6 +44,24 @@
             padding: 10px;
             background-color: #333;
             color: white;
+            position: relative;
+        }
+
+        .boton-regreso {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .boton-regreso:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -84,10 +102,13 @@
         
         mysqli_close($conexion);
 
-        echo "<footer><p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p></footer>";
+        echo "<footer>";
+        echo "<p>Integrantes del grupo: Hugo Antón, Miguel Sanz</p>";
+        echo "</footer>";
     } else {
         echo "<p>Error al consultar el catálogo de libros: " . mysqli_error($conexion) . "</p>";
     }
+        echo "<a href='index.html' class='boton-regreso'>Volver a Inicio</a>";
     ?>
 </body>
 </html>
